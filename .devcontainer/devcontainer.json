@@ -1,0 +1,37 @@
+{
+    "name": "Fedora Build Env",
+    "build": {
+        "dockerfile": "Containerfile"
+    },
+    "containerUser": "vscode",
+    "remoteUser": "vscode",
+    "mounts": [
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "EditorConfig.EditorConfig",
+                "ms-vscode.cpptools-themes",
+                "twxs.cmake",
+                "ms-vscode.cmake-tools"
+            ],
+            "settings": {
+                "files.exclude": {
+                    "**/.classpath": true,
+                    "**/.DS_Store": true,
+                    "**/.factorypath": true,
+                    "**/.git": true,
+                    "**/.project": true,
+                    "**/.settings": true,
+                    "**/*.js": {
+                        "when": "$(basename).ts"
+                    },
+                    "**/*.js.map": true
+                },
+                "telemetry.telemetryLevel": "off"
+            }
+        }
+    },
+    "features": {}
+}
+
